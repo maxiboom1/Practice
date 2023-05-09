@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, assertPlatform } from '@angular/core';
+import BookModel from 'src/app/models/BookModel';
 import { DataService } from 'src/app/services/data.service';
 import { NotifyService } from 'src/app/services/notify.service';
 
@@ -7,17 +8,21 @@ import { NotifyService } from 'src/app/services/notify.service';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
     public constructor(private dataService: DataService, private notifyService: NotifyService) { }
-
-    public async ngOnInit() {
+    public books: BookModel[]; 
+    public searchString: string;
+    
+    
+    public async search() {
         try {
-            // this.myData = await this.dataService.getAll___();
+            this.books = await this.dataService.getBooksBySearch(this.searchString);
         }
         catch(err: any) {
             this.notifyService.error(err);
         }
     }
+
     
 }

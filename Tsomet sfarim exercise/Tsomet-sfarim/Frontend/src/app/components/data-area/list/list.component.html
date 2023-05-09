@@ -1,1 +1,15 @@
-<p>list works!</p>
+<div>
+    <label for="">Search books</label>
+
+    <input type="search" [(ngModel)]="searchString">
+
+    <button (click)= "search()">Search</button>
+
+    <hr>
+
+    <div *ngFor="let b of books">
+        <p>{{b.bookName}}</p>
+    </div>
+     
+
+</div>

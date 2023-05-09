@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import img from "../../../../assets/books.jpg";
 
 @Component({
   selector: 'app-layout',
