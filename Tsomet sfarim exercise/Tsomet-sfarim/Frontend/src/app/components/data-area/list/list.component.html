@@ -10,14 +10,18 @@
     </form>
 
     <hr>
-
+    <h2 *ngIf="books.length > 0">Our books offer:</h2>
+    
     <div class="card" *ngFor="let b of books">
         
         <p>{{b.bookName}}</p>
-        <span>{{b.authorFullName}}</span>
-        <span>{{b.pagesCount}}</span>
-        <span>{{b.price}}</span>
-
+        <hr>
+        <div class="cardContainer">
+            <span>Author: {{b.authorFullName}}</span><br>
+            <span>Pages: {{b.pagesCount}}</span><br>
+            <span>Price: {{b.price |currency:"USD"}}</span>
+        </div>
+        
     </div>
      
 

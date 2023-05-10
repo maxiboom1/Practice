@@ -1,1 +1,22 @@
-<p>insert works!</p>
+<div>
+
+    <form>
+
+        <label>Author</label>
+        <select name="authorId">
+            <option disabled selected value="">Set author...</option>
+            <option *ngFor="let a of authors">{{a.firstName}} {{a.lastName}}</option>
+        </select>
+
+        <label>Book name</label>
+        <input type="text" name="bookName">
+
+        <label>Pages</label>
+        <input type="text" name="pagesCount">
+
+        <label>Price</label>
+        <input type="number" step="0.01" name="price">
+    </form>
+
+
+</div>
