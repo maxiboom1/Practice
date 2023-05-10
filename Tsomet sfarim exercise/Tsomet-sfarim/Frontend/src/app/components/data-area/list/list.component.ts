@@ -1,4 +1,4 @@
-import { Component, OnInit, assertPlatform } from '@angular/core';
+import { Component} from '@angular/core';
 import BookModel from 'src/app/models/BookModel';
 import { DataService } from 'src/app/services/data.service';
 import { NotifyService } from 'src/app/services/notify.service';
@@ -16,8 +16,9 @@ export class ListComponent {
     
     
     public async search() {
-        try {
+        try {            
             this.books = await this.dataService.getBooksBySearch(this.searchString);
+            console.log(this.books)
         }
         catch(err: any) {
             this.notifyService.error(err);

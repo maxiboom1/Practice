@@ -19,6 +19,8 @@ export class DataService {
     }
 
     public async getBooksBySearch(searchString:string): Promise<BookModel[]> {
+        console.log(appConfig.booksBySearch + searchString);
+
         const observable = this.http.get<BookModel[]>(appConfig.booksBySearch + searchString);
         const books = await firstValueFrom(observable);
         return books;

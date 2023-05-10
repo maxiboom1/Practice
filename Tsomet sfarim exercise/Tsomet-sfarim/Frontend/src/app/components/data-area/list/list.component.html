@@ -1,14 +1,23 @@
 <div>
-    <label for="">Search books</label>
+    <form ngNativeValidate>
+    
+        <label for="">Search books</label>
 
-    <input type="search" [(ngModel)]="searchString">
+        <input name="search" type="search" [(ngModel)]="searchString" required>
 
-    <button (click)= "search()">Search</button>
+        <button (click)= "search()">Search</button>
+    
+    </form>
 
     <hr>
 
-    <div *ngFor="let b of books">
+    <div class="card" *ngFor="let b of books">
+        
         <p>{{b.bookName}}</p>
+        <span>{{b.authorFullName}}</span>
+        <span>{{b.pagesCount}}</span>
+        <span>{{b.price}}</span>
+
     </div>
      
 

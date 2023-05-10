@@ -11,7 +11,10 @@ async function getAllAuthors() {
 
 async function getBooksBySearch(searchString: string) {
     
-    const sql =`SELECT * FROM books WHERE bookName LIKE ? `;
+    const sql =`SELECT bookId, books.authorId, bookName, pagesCount, price, CONCAT(authors.authorFirstName, ' ', authors.authorLastName) AS authorFullName FROM books
+    JOIN authors
+    ON books.authorId = authors.authorId
+    WHERE bookName LIKE ? `;
     const books = await dal.execute(sql,['%' + searchString + '%']);
     return books;
 }
