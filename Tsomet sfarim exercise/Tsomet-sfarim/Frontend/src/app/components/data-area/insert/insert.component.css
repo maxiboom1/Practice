@@ -1,0 +1,25 @@
+.addForm{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    border: 2px black solid;
+    height: 350px;
+    padding: 15px;
+    border-radius: 15px;
+    background-image: linear-gradient(rgba(187, 255, 0, 0.397), rgba(0, 87, 128, 0.438));}
+button {
+    height: 40px;
+} 
+
+input{
+    height: 20px;
+}
+
+select{
+    height: 30px;
+}
+
+label{
+    margin: 5px 5px;
+}

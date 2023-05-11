@@ -1,11 +1,13 @@
 <div>
 
-    <form>
-
+    <form class="addForm" onsubmit="send()">
+        
+        <h2>Add book</h2>
+        
         <label>Author</label>
-        <select name="authorId">
+        <select name="authorId" [(ngModel)]="book.authorId">
             <option disabled selected value="">Set author...</option>
-            <option *ngFor="let a of authors">{{a.firstName}} {{a.lastName}}</option>
+            <option *ngFor="let a of authors">{{a.authorFirstName}} {{a.authorLastName}}</option>
         </select>
 
         <label>Book name</label>
@@ -16,6 +18,11 @@
 
         <label>Price</label>
         <input type="number" step="0.01" name="price">
+        
+        <br><br>
+        
+        <button>Add</button>
+
     </form>
 
 
