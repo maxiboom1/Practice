@@ -19,12 +19,19 @@ export class DataService {
     }
 
     public async getBooksBySearch(searchString:string): Promise<BookModel[]> {
-        console.log(appConfig.booksBySearch + searchString);
-
         const observable = this.http.get<BookModel[]>(appConfig.booksBySearch + searchString);
         const books = await firstValueFrom(observable);
         return books;
     }
     
+    public async addBook (book:BookModel): Promise<void> {
+        const observable = this.http.post<BookModel>(appConfig.books, book);
+        await firstValueFrom(observable);
+    }
+
+    public async deleteBook(bookId: number){
+        const observable = this.http.delete<number>(appConfig.books + bookId);
+        await firstValueFrom(observable);
+    }
     
 }

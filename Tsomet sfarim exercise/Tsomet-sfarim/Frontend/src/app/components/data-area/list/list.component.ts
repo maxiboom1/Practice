@@ -11,7 +11,7 @@ import { NotifyService } from 'src/app/services/notify.service';
 export class ListComponent {
 
     public constructor(private dataService: DataService, private notifyService: NotifyService) { }
-    public books: BookModel[]; 
+    public books: BookModel[] = []; 
     public searchString: string;
     
     
