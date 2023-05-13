@@ -1,4 +1,4 @@
-Fullstack exercise - Tzomet sfarim site:
+Fullstack exercise - Tzomet sfarim site (**mySql, nodeJs, angular**):
 
 To create a website for "Book Junction," you need to follow these steps:
 
@@ -46,4 +46,4 @@ To create a website for "Book Junction," you need to follow these steps:
      - The ability to delete an existing book.
      - Add aesthetic design of your choice for the entire site.
 
-     * **Used technologies: mySql, nodeJs, angular**
+    
