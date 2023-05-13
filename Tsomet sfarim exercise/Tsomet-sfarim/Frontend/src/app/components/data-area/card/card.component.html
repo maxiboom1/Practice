@@ -1,0 +1,15 @@
+<div class="card">
+        
+    <p>{{book.bookName}}</p>
+    
+    <hr>
+    
+    <div class="cardContainer">
+        <span>Author: {{book.authorFullName}}</span><br>
+        <span>Pages: {{book.pagesCount}}</span><br>
+        <span>Price: {{book.price |currency:"USD"}}</span>
+    </div>
+    
+    <button (click)="deleteBook()">X</button>
+
+</div>

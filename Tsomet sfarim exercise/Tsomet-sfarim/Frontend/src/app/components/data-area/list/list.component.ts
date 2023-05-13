@@ -18,12 +18,24 @@ export class ListComponent {
     public async search() {
         try {            
             this.books = await this.dataService.getBooksBySearch(this.searchString);
-            console.log(this.books)
         }
         catch(err: any) {
             this.notifyService.error(err);
         }
     }
 
+    public async deleteThisBook(bookId: number): Promise<void>{
+        const ok = confirm("Sure?");
+        
+        if(ok){
+            await this.dataService.deleteBook(bookId);
+            this.notifyService.success("Book has been deleted");
+            
+            //Reset search list
+            this.books = [];
+            this.searchString = "";
+        }
+ 
+    }
     
 }
