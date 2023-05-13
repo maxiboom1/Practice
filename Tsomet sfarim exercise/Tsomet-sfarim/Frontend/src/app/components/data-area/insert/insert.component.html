@@ -1,23 +1,23 @@
 <div>
 
-    <form class="addForm" (ngSubmit)="send()">
+    <form class="addForm" (ngSubmit)="send()" ngNativeValidate>
         
         <h2>Add book</h2>
         
         <label>Author</label>
-        <select name="authorId" [(ngModel)]="book.authorId">
+        <select name="authorId" [(ngModel)]="book.authorId" required>
             <option disabled selected value="">Set author...</option>
             <option *ngFor="let a of authors" [value]="a.authorId">{{a.authorFirstName}} {{a.authorLastName}}</option>
         </select>
 
         <label>Book name</label>
-        <input type="text" name="bookName" [(ngModel)]="book.bookName">
+        <input type="text" name="bookName" [(ngModel)]="book.bookName" required>
 
         <label>Pages</label>
-        <input type="number" name="pagesCount" [(ngModel)]="book.pagesCount">
+        <input type="number" name="pagesCount" [(ngModel)]="book.pagesCount" required max="1000" min="5">
 
         <label>Price</label>
-        <input type="number" step="0.01" name="price" [(ngModel)]="book.price">
+        <input type="number" step="0.01" name="price" [(ngModel)]="book.price" required max="1000" min="0">
         
         <br><br>
 
