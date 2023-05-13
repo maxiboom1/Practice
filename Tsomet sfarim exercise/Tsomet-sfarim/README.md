@@ -25,7 +25,7 @@ To create a website for "Book Junction," you need to follow these steps:
    - Check that all routes work as required using Postman.
 
 3. Creating the Frontend Project:
-   - Create a new React project that includes:
+   - Create a new Angular project that includes:
      - A layout that contains:
        - A title
        - The above logo of the book network
@@ -45,3 +45,5 @@ To create a website for "Book Junction," you need to follow these steps:
          - The price must be between 0 and 1000.
      - The ability to delete an existing book.
      - Add aesthetic design of your choice for the entire site.
+
+     * **Used technologies: mySql, nodeJs, angular**
