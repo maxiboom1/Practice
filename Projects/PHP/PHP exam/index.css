@@ -1,0 +1,42 @@
+body {
+text-align: center;
+background-color: blanchedalmond;
+font-family: "Trirong", serif;
+min-height: 95vh;
+display: flex;
+flex-direction: column;
+}
+
+.content {
+    padding-top:10% ;
+    margin: auto;
+    flex: 1;
+    max-width: 80%;
+}
+
+form{
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(255, 235, 205, 0.625);
+}
+
+span{
+    margin: 150px;
+}
+
+form > input{
+    width: 400px;
+    height: 30px;
+    font-family: "Trirong", serif;
+}
+
+form > button{
+    height: 36px;
+}
+
+footer{
+    width: 90%;
+    height: 26px;
+    text-align: left;
+    color: rgba(6, 52, 9, 0.649);
+}
