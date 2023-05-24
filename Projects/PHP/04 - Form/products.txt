@@ -1,0 +1,3 @@
+Name: Apple, Price: 3, Stock: 100
+Name: Banana in a Box, Price: 4, Stock: 200
+Name: Peach, Price: 5, Stock: 300
