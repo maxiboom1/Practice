@@ -41,7 +41,7 @@ function compare(s, p){
         if(anagramDetected){result.push(i);}
 
     }
-    if (result.length === 0) return [-1] ;
+    
     return result;
     
     }
