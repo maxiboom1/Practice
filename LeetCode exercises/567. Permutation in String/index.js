@@ -14,13 +14,13 @@ function checkInclusion(s1, s2) {
     }
 
     // Run over s2, create subStr, compare it with hash copy and adjust hash if there is any matches. 
-    // If there is coplete matches with hash - then its permutation.
+    // If there is complete matches with hash - then its permutation.
     for(let i = 0; i<= s2.length-s1.length; i++){
         
         let permutationDetected = true;
 
         const hashTable = {...hash}; // Create hash copy
-        
+                
         const subStr = s2.slice(i,i+s1.length);
         
         // Run over subStr and compare with hash copy
